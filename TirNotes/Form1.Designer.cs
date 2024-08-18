@@ -51,6 +51,7 @@ namespace TirNotes
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hacercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contenidoTextBox = new System.Windows.Forms.RichTextBox();
+            this.pictureInPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@ namespace TirNotes
             this.archivoToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.estiloToolStripMenuItem,
+            this.pictureInPictureToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -220,8 +222,9 @@ namespace TirNotes
             // hacercaDeToolStripMenuItem
             // 
             this.hacercaDeToolStripMenuItem.Name = "hacercaDeToolStripMenuItem";
-            this.hacercaDeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.hacercaDeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hacercaDeToolStripMenuItem.Text = "Acerca de...";
+            this.hacercaDeToolStripMenuItem.Click += new System.EventHandler(this.hacercaDeToolStripMenuItem_Click);
             // 
             // contenidoTextBox
             // 
@@ -231,6 +234,13 @@ namespace TirNotes
             this.contenidoTextBox.Size = new System.Drawing.Size(800, 422);
             this.contenidoTextBox.TabIndex = 1;
             this.contenidoTextBox.Text = "";
+            // 
+            // pictureInPictureToolStripMenuItem
+            // 
+            this.pictureInPictureToolStripMenuItem.Name = "pictureInPictureToolStripMenuItem";
+            this.pictureInPictureToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.pictureInPictureToolStripMenuItem.Text = "Picture in Picture";
+            this.pictureInPictureToolStripMenuItem.Click += new System.EventHandler(this.pictureInPictureToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -273,6 +283,7 @@ namespace TirNotes
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hacercaDeToolStripMenuItem;
         private System.Windows.Forms.RichTextBox contenidoTextBox;
+        private System.Windows.Forms.ToolStripMenuItem pictureInPictureToolStripMenuItem;
     }
 }
 

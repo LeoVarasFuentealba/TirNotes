@@ -13,9 +13,26 @@ namespace TirNotes
 {
     public partial class Form1 : Form
     {
+        private FloatingForm floatingForm;
+
         public Form1()
         {
             InitializeComponent();
+            floatingForm = new FloatingForm();
+        }
+
+        private void UpdateFloatingWindow()
+        {
+            if (floatingForm != null)
+            {
+                floatingForm.SetFloatingText(contenidoTextBox.Rtf);
+                floatingForm.UpdateSelectionFont(contenidoTextBox.SelectionFont ?? contenidoTextBox.Font);
+                floatingForm.UpdateTextColor(contenidoTextBox.SelectionColor);
+            }
+        }
+        private void contenidoTextBox_SelectionChanged(object sender, EventArgs e)
+        {
+            UpdateFloatingWindow();
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,6 +123,7 @@ namespace TirNotes
             if (myFont.ShowDialog() == DialogResult.OK)
             {
                 contenidoTextBox.SelectionFont = myFont.Font;
+                UpdateFloatingWindow();
             }
         }
 
@@ -115,6 +133,7 @@ namespace TirNotes
             if(myColorDialog.ShowDialog() == DialogResult.OK)
             {
                 contenidoTextBox.SelectionColor = myColorDialog.Color;
+                UpdateFloatingWindow();
             }
         }
 
@@ -125,6 +144,29 @@ namespace TirNotes
             {
                 contenidoTextBox.BackColor = myColorBackground.Color;
             }
+        }
+
+        private void hacercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Created by Leandro Varas, Github:https://github.com/LeoVarasFuentealba");
+        }
+
+        private void pictureInPictureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (floatingForm != null)
+            {
+                floatingForm.Dispose();
+            }
+
+            floatingForm = new FloatingForm();
+            floatingForm.TextChanged += FloatingForm_TextChanged;
+            floatingForm.SetFloatingText(contenidoTextBox.Rtf);
+            floatingForm.Show();
+        }
+
+        private void FloatingForm_TextChanged(string newText)
+        {
+            contenidoTextBox.Rtf = newText;
         }
     }
 }
