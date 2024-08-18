@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TirNotes
 {
     public partial class OpcionesPip : Form
     {
+        public string Opacidad { get; private set; } = "100%";
+
         public OpcionesPip()
         {
             InitializeComponent();
+        }
+
+        private void Opacidadcnf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Opacidad = Opacidadcnf.Text;
         }
     }
 }

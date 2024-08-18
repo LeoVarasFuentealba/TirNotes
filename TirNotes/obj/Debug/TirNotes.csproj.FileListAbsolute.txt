@@ -9,3 +9,4 @@ C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\Ti
 C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.exe
 C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.pdb
 C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.FloatingForm.resources
+C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.OpcionesPip.resources

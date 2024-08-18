@@ -13,12 +13,13 @@ namespace TirNotes
 {
     public partial class Form1 : Form
     {
-        private FloatingForm floatingForm;
+        public FloatingForm floatingForm;
 
         public Form1()
         {
             InitializeComponent();
             floatingForm = new FloatingForm();
+            floatingForm.TextChanged += FloatingForm_TextChanged;
         }
 
         private void UpdateFloatingWindow()
@@ -30,6 +31,7 @@ namespace TirNotes
                 floatingForm.UpdateTextColor(contenidoTextBox.SelectionColor);
             }
         }
+
         private void contenidoTextBox_SelectionChanged(object sender, EventArgs e)
         {
             UpdateFloatingWindow();
@@ -48,26 +50,31 @@ namespace TirNotes
             myOpen.Filter = "Archivos de texto (.txt)|*.txt|Todos los archivos (*.*)|*.*";
             myOpen.Title = "Abrir archivo";
             myOpen.ShowDialog();
-            myOpen.OpenFile();
             string ruteFile = myOpen.FileName;
 
-            myReading = File.OpenText(ruteFile);
-            contenidoTextBox.Text = myReading.ReadToEnd();
+            if (!string.IsNullOrEmpty(ruteFile))
+            {
+                myReading = File.OpenText(ruteFile);
+                contenidoTextBox.Text = myReading.ReadToEnd();
+            }
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog mySave = new SaveFileDialog();
             StreamWriter myWriter = null;
-            
+
             mySave.Filter = "Archivos de texto (.txt)|*.txt|Todos los archivos (*.*)|*.*";
             mySave.Title = "Guardar como...";
             mySave.ShowDialog();
             string rute = mySave.FileName;
-            myWriter = File.AppendText(rute);
-            myWriter.Write(contenidoTextBox.Text);
-            myWriter.Flush();
 
+            if (!string.IsNullOrEmpty(rute))
+            {
+                myWriter = File.AppendText(rute);
+                myWriter.Write(contenidoTextBox.Text);
+                myWriter.Flush();
+            }
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,7 +137,7 @@ namespace TirNotes
         private void colorDeFuenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog myColorDialog = new ColorDialog();
-            if(myColorDialog.ShowDialog() == DialogResult.OK)
+            if (myColorDialog.ShowDialog() == DialogResult.OK)
             {
                 contenidoTextBox.SelectionColor = myColorDialog.Color;
                 UpdateFloatingWindow();
@@ -151,13 +158,16 @@ namespace TirNotes
             MessageBox.Show("Created by Leandro Varas, Github:https://github.com/LeoVarasFuentealba");
         }
 
-        private void pictureInPictureToolStripMenuItem_Click(object sender, EventArgs e)
+        public void pictureInPictureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (floatingForm != null)
+            // Cerrar el formulario anterior si existe
+            if (floatingForm != null && !floatingForm.IsDisposed)
             {
+                floatingForm.Close();
                 floatingForm.Dispose();
             }
 
+            // Crear una nueva instancia del FloatingForm
             floatingForm = new FloatingForm();
             floatingForm.TextChanged += FloatingForm_TextChanged;
             floatingForm.SetFloatingText(contenidoTextBox.Rtf);

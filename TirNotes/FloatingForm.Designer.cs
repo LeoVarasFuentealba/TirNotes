@@ -32,7 +32,7 @@ namespace TirNotes
             this.FloatingTextBox = new System.Windows.Forms.RichTextBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Opciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FloatingTextBox
@@ -45,22 +45,23 @@ namespace TirNotes
             this.FloatingTextBox.TabIndex = 0;
             this.FloatingTextBox.Text = "";
             // 
-            // button1
+            // Opciones
             // 
-            this.button1.Location = new System.Drawing.Point(415, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Opciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Opciones.Location = new System.Drawing.Point(434, 12);
+            this.Opciones.Name = "Opciones";
+            this.Opciones.Size = new System.Drawing.Size(45, 23);
+            this.Opciones.TabIndex = 1;
+            this.Opciones.Text = "...";
+            this.Opciones.UseVisualStyleBackColor = false;
+            this.Opciones.Click += new System.EventHandler(this.button1_Click);
             // 
             // FloatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 284);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Opciones);
             this.Controls.Add(this.FloatingTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FloatingForm";
@@ -74,6 +75,6 @@ namespace TirNotes
         private System.Windows.Forms.RichTextBox FloatingTextBox;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Opciones;
     }
 }
