@@ -29,6 +29,7 @@ namespace TirNotes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpcionesPip));
             this.Opacidadcnf = new System.Windows.Forms.ComboBox();
             this.Opacidadtxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -68,6 +69,7 @@ namespace TirNotes
             this.ClientSize = new System.Drawing.Size(343, 183);
             this.Controls.Add(this.Opacidadtxt);
             this.Controls.Add(this.Opacidadcnf);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OpcionesPip";
             this.Text = "OpcionesPip";
             this.ResumeLayout(false);

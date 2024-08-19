@@ -69,6 +69,23 @@ namespace TirNotes
         private void button1_Click(object sender, EventArgs e)
         {
             OpcionesPip opcionesPip = new OpcionesPip();
+
+            int nuevaPosX = this.Location.X + this.Width;
+            int nuevaPosY = this.Location.Y;
+
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            if (nuevaPosX + opcionesPip.Width > workingArea.Width)
+            {
+                nuevaPosX = workingArea.Width - opcionesPip.Width;
+            }
+            if (nuevaPosY + opcionesPip.Height > workingArea.Height)
+            {
+                nuevaPosY = workingArea.Height - opcionesPip.Height; 
+            }
+
+            opcionesPip.StartPosition = FormStartPosition.Manual;
+            opcionesPip.Location = new Point(nuevaPosX, nuevaPosY);
+
             opcionesPip.ShowDialog();
 
             UpdateOpacity(opcionesPip.Opacidad);

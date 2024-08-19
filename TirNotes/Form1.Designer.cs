@@ -29,6 +29,7 @@ namespace TirNotes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +49,10 @@ namespace TirNotes
             this.estiloDeFuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDeFuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDeFondoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureInPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hacercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contenidoTextBox = new System.Windows.Forms.RichTextBox();
-            this.pictureInPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,23 +194,30 @@ namespace TirNotes
             // estiloDeFuenteToolStripMenuItem
             // 
             this.estiloDeFuenteToolStripMenuItem.Name = "estiloDeFuenteToolStripMenuItem";
-            this.estiloDeFuenteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estiloDeFuenteToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.estiloDeFuenteToolStripMenuItem.Text = "Estilo de Fuente";
             this.estiloDeFuenteToolStripMenuItem.Click += new System.EventHandler(this.estiloDeFuenteToolStripMenuItem_Click);
             // 
             // colorDeFuenteToolStripMenuItem
             // 
             this.colorDeFuenteToolStripMenuItem.Name = "colorDeFuenteToolStripMenuItem";
-            this.colorDeFuenteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colorDeFuenteToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.colorDeFuenteToolStripMenuItem.Text = "Color de Fuente";
             this.colorDeFuenteToolStripMenuItem.Click += new System.EventHandler(this.colorDeFuenteToolStripMenuItem_Click);
             // 
             // colorDeFondoToolStripMenuItem
             // 
             this.colorDeFondoToolStripMenuItem.Name = "colorDeFondoToolStripMenuItem";
-            this.colorDeFondoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colorDeFondoToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.colorDeFondoToolStripMenuItem.Text = "Color de Fondo";
             this.colorDeFondoToolStripMenuItem.Click += new System.EventHandler(this.colorDeFondoToolStripMenuItem_Click);
+            // 
+            // pictureInPictureToolStripMenuItem
+            // 
+            this.pictureInPictureToolStripMenuItem.Name = "pictureInPictureToolStripMenuItem";
+            this.pictureInPictureToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.pictureInPictureToolStripMenuItem.Text = "Picture in Picture";
+            this.pictureInPictureToolStripMenuItem.Click += new System.EventHandler(this.pictureInPictureToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -222,7 +230,7 @@ namespace TirNotes
             // hacercaDeToolStripMenuItem
             // 
             this.hacercaDeToolStripMenuItem.Name = "hacercaDeToolStripMenuItem";
-            this.hacercaDeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hacercaDeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.hacercaDeToolStripMenuItem.Text = "Acerca de...";
             this.hacercaDeToolStripMenuItem.Click += new System.EventHandler(this.hacercaDeToolStripMenuItem_Click);
             // 
@@ -235,13 +243,6 @@ namespace TirNotes
             this.contenidoTextBox.TabIndex = 1;
             this.contenidoTextBox.Text = "";
             // 
-            // pictureInPictureToolStripMenuItem
-            // 
-            this.pictureInPictureToolStripMenuItem.Name = "pictureInPictureToolStripMenuItem";
-            this.pictureInPictureToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.pictureInPictureToolStripMenuItem.Text = "Picture in Picture";
-            this.pictureInPictureToolStripMenuItem.Click += new System.EventHandler(this.pictureInPictureToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,6 +250,7 @@ namespace TirNotes
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.contenidoTextBox);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
