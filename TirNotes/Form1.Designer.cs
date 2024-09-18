@@ -29,6 +29,7 @@ namespace TirNotes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,14 @@ namespace TirNotes
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hacercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contenidoTextBox = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copiarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cortarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pegarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -236,17 +244,68 @@ namespace TirNotes
             // 
             // contenidoTextBox
             // 
+            this.contenidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contenidoTextBox.ContextMenuStrip = this.contextMenuStrip1;
             this.contenidoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenidoTextBox.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contenidoTextBox.Location = new System.Drawing.Point(0, 28);
+            this.contenidoTextBox.Margin = new System.Windows.Forms.Padding(8);
             this.contenidoTextBox.Name = "contenidoTextBox";
             this.contenidoTextBox.Size = new System.Drawing.Size(800, 422);
             this.contenidoTextBox.TabIndex = 1;
             this.contenidoTextBox.Text = "";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copiarToolStripMenuItem1,
+            this.cortarToolStripMenuItem1,
+            this.pegarToolStripMenuItem1,
+            this.fuenteToolStripMenuItem,
+            this.colorToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 152);
+            // 
+            // copiarToolStripMenuItem1
+            // 
+            this.copiarToolStripMenuItem1.Name = "copiarToolStripMenuItem1";
+            this.copiarToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.copiarToolStripMenuItem1.Text = "Copiar";
+            this.copiarToolStripMenuItem1.Click += new System.EventHandler(this.copiarToolStripMenuItem1_Click);
+            // 
+            // cortarToolStripMenuItem1
+            // 
+            this.cortarToolStripMenuItem1.Name = "cortarToolStripMenuItem1";
+            this.cortarToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.cortarToolStripMenuItem1.Text = "Cortar";
+            this.cortarToolStripMenuItem1.Click += new System.EventHandler(this.cortarToolStripMenuItem1_Click);
+            // 
+            // pegarToolStripMenuItem1
+            // 
+            this.pegarToolStripMenuItem1.Name = "pegarToolStripMenuItem1";
+            this.pegarToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.pegarToolStripMenuItem1.Text = "Pegar";
+            this.pegarToolStripMenuItem1.Click += new System.EventHandler(this.pegarToolStripMenuItem1_Click);
+            // 
+            // fuenteToolStripMenuItem
+            // 
+            this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.fuenteToolStripMenuItem.Text = "Fuente...";
+            this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
+            // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.colorToolStripMenuItem.Text = "Color...";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.contenidoTextBox);
             this.Controls.Add(this.menuStrip1);
@@ -256,6 +315,7 @@ namespace TirNotes
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +346,12 @@ namespace TirNotes
         private System.Windows.Forms.ToolStripMenuItem hacercaDeToolStripMenuItem;
         private System.Windows.Forms.RichTextBox contenidoTextBox;
         private System.Windows.Forms.ToolStripMenuItem pictureInPictureToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem copiarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pegarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cortarToolStripMenuItem1;
     }
 }
 
