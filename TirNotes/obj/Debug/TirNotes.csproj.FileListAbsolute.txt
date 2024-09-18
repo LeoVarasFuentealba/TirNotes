@@ -1,12 +1,12 @@
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\bin\Debug\TirNotes.exe.config
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\bin\Debug\TirNotes.exe
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\bin\Debug\TirNotes.pdb
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.AssemblyReference.cache
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.Form1.resources
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.Properties.Resources.resources
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.GenerateResource.cache
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.CoreCompileInputs.cache
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.exe
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.pdb
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.FloatingForm.resources
-C:\Users\leova\2024-2025\Proyectos Personales\Bloc de notas TirNotes\TirNotes\TirNotes\obj\Debug\TirNotes.OpcionesPip.resources
+C:\Proyectos Personales\TirNotes\TirNotes\bin\Debug\TirNotes.exe.config
+C:\Proyectos Personales\TirNotes\TirNotes\bin\Debug\TirNotes.exe
+C:\Proyectos Personales\TirNotes\TirNotes\bin\Debug\TirNotes.pdb
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.AssemblyReference.cache
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.FloatingForm.resources
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.Form1.resources
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.OpcionesPip.resources
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.Properties.Resources.resources
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.GenerateResource.cache
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.csproj.CoreCompileInputs.cache
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.exe
+C:\Proyectos Personales\TirNotes\TirNotes\obj\Debug\TirNotes.pdb

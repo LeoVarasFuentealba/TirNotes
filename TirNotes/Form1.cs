@@ -11,8 +11,9 @@ using System.IO;
 
 namespace TirNotes
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
+
         public FloatingForm floatingForm;
 
         public Form1()
@@ -52,10 +53,12 @@ namespace TirNotes
             myOpen.ShowDialog();
             string ruteFile = myOpen.FileName;
 
+
             if (!string.IsNullOrEmpty(ruteFile))
             {
                 myReading = File.OpenText(ruteFile);
                 contenidoTextBox.Text = myReading.ReadToEnd();
+                myReading.Close();
             }
         }
 
@@ -177,6 +180,31 @@ namespace TirNotes
         private void FloatingForm_TextChanged(string newText)
         {
             contenidoTextBox.Rtf = newText;
+        }
+
+        private void copiarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            contenidoTextBox.Copy();
+        }
+
+        private void pegarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            contenidoTextBox.Paste();
+        }
+
+        private void cortarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            contenidoTextBox.Cut();
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
